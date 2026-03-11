@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,16 +9,22 @@
 
 <title>Dr. Thitipong Panthum | Animal Genomics</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:#f5f7fb;
-color:#222;
-line-height:1.6;
+background:#0b1f1a;
+color:#e2f5ef;
+line-height:1.7;
+
+background-image:url("data:image/svg+xml,%3Csvg width='140' height='140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 Q70 70 30 140 M110 0 Q70 70 110 140' stroke='%2310b981' stroke-width='1' fill='none' opacity='0.18'/%3E%3C/svg%3E");
 }
 
 .container{
@@ -26,11 +33,14 @@ max-width:1200px;
 margin:auto;
 }
 
+/* NAV */
+
 nav{
-background:#0b3d91;
+background:#071512;
 position:sticky;
 top:0;
 z-index:1000;
+box-shadow:0 4px 20px rgba(0,0,0,0.6);
 }
 
 nav ul{
@@ -39,7 +49,7 @@ justify-content:center;
 flex-wrap:wrap;
 list-style:none;
 margin:0;
-padding:12px;
+padding:14px;
 }
 
 nav li{
@@ -47,15 +57,33 @@ margin:6px 18px;
 }
 
 nav a{
-color:white;
+color:#9be7c4;
 text-decoration:none;
-font-weight:600;
+font-weight:500;
+transition:0.25s;
 }
 
-.hero{
-background:linear-gradient(120deg,#0b3d91,#174ea6);
+nav a:hover{
 color:white;
-padding:90px 0;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(120deg,#071512,#132f2b);
+color:white;
+padding:100px 0;
+position:relative;
+}
+
+.hero:before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:radial-gradient(circle at 20% 20%,rgba(16,185,129,0.15),transparent);
 }
 
 .hero-flex{
@@ -63,16 +91,19 @@ display:flex;
 align-items:center;
 gap:50px;
 flex-wrap:wrap;
+position:relative;
+z-index:1;
 }
 
 .hero img{
 width:200px;
-border-radius:100px;
-border:5px solid white;
+border-radius:120px;
+border:4px solid #10b981;
+box-shadow:0 0 20px rgba(16,185,129,0.5);
 }
 
 .hero h1{
-font-size:42px;
+font-size:44px;
 margin-bottom:8px;
 }
 
@@ -81,28 +112,42 @@ font-size:18px;
 opacity:0.9;
 }
 
+/* BUTTON */
+
 .btn{
 display:inline-block;
 margin-top:12px;
-padding:8px 14px;
-background:white;
-color:#0b3d91;
+padding:10px 16px;
+background:#10b981;
+color:white;
 text-decoration:none;
 border-radius:6px;
-font-weight:600;
+font-weight:500;
 margin-right:8px;
+transition:0.25s;
 }
+
+.btn:hover{
+background:#34d399;
+transform:translateY(-2px);
+}
+
+/* SECTIONS */
 
 section{
 padding:70px 0;
 }
 
+/* HEADINGS */
+
 h2{
 font-size:30px;
 margin-bottom:25px;
-border-left:6px solid #0b3d91;
+border-left:6px solid #10b981;
 padding-left:12px;
 }
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -110,20 +155,32 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
+/* CARD */
+
 .card{
-background:white;
+background:#132f2b;
 padding:25px;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+box-shadow:0 6px 18px rgba(0,0,0,0.4);
+transition:0.3s;
 }
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 30px rgba(0,0,0,0.7);
+}
+
+/* PUBLICATIONS */
 
 .pub{
 margin-bottom:14px;
-padding:14px;
-background:white;
-border-left:5px solid #0b3d91;
-box-shadow:0 2px 6px rgba(0,0,0,0.05);
+padding:16px;
+background:#132f2b;
+border-left:5px solid #10b981;
+box-shadow:0 3px 10px rgba(0,0,0,0.4);
 }
+
+/* METRICS */
 
 .metrics{
 display:flex;
@@ -133,33 +190,33 @@ margin-top:25px;
 }
 
 .metric-card{
-background:white;
+background:#132f2b;
 padding:20px;
 border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.08);
+box-shadow:0 4px 12px rgba(0,0,0,0.4);
 min-width:180px;
 }
 
 .metric-number{
-font-size:28px;
+font-size:30px;
 font-weight:700;
-color:#0b3d91;
+color:#34d399;
 }
 
-table{
-width:100%;
-border-collapse:collapse;
+/* MAP */
+
+#map{
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 6px 18px rgba(0,0,0,0.5);
+height:500px;
 }
 
-td,th{
-border-bottom:1px solid #ddd;
-padding:10px;
-text-align:left;
-}
+/* FOOTER */
 
 footer{
-background:#111;
-color:white;
+background:#071512;
+color:#94c7b6;
 text-align:center;
 padding:35px;
 margin-top:40px;
@@ -174,18 +231,11 @@ margin-top:40px;
 <nav>
 <ul>
 <li><a href="#about">About</a></li>
-<li><a href="#profiles">Profiles</a></li>
 <li><a href="#research">Research</a></li>
-<li><a href="#publications">Publications</a></li>
-<li><a href="#projects">Experience</a></li>
-<li><a href="#grants">Grants</a></li>
-<li><a href="#awards">Awards</a></li>
 <li><a href="#collaboration">Collaboration</a></li>
-<li><a href="#cv">CV</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
-
 
 <section class="hero">
 
@@ -213,7 +263,6 @@ margin-top:40px;
 
 </section>
 
-
 <section id="about">
 
 <div class="container">
@@ -221,7 +270,7 @@ margin-top:40px;
 <h2>About</h2>
 
 <p>
-Dr. Thitipong Panthum is a researcher in animal genomics and molecular cytogenetics. His research focuses on genome evolution, sex determination systems, and comparative genomics across aquatic and vertebrate species.
+Dr. Thitipong Panthum is a researcher in animal genomics and molecular cytogenetics focusing on genome evolution, sex determination systems, and comparative genomics.
 </p>
 
 <div class="metrics">
@@ -247,40 +296,6 @@ International Publications
 
 </section>
 
-
-<section id="profiles">
-
-<div class="container">
-
-<h2>Academic Profiles</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>ORCID</h3>
-<p>Persistent digital identifier linking research outputs.</p>
-<a class="btn" href="https://orcid.org/0000-0001-7147-1684" target="_blank">View ORCID</a>
-</div>
-
-<div class="card">
-<h3>Scopus Author Profile</h3>
-<p>Indexed publications and citation analytics.</p>
-<a class="btn" href="https://www.scopus.com/authid/detail.uri?authorId=57218177525" target="_blank">View Scopus</a>
-</div>
-
-<div class="card">
-<h3>ResearchGate</h3>
-<p>Research collaboration network and publication sharing.</p>
-<a class="btn" href="https://www.researchgate.net/profile/Thitipong-Panthum" target="_blank">View ResearchGate</a>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
 <section id="research">
 
 <div class="container">
@@ -291,22 +306,22 @@ International Publications
 
 <div class="card">
 <h3>Animal Genomics</h3>
-<p>Genome sequencing, assembly, and pangenome analysis.</p>
+<p>Genome sequencing and pangenome analysis.</p>
 </div>
 
 <div class="card">
 <h3>Cytogenetics</h3>
-<p>Chromosome mapping and comparative cytogenetics.</p>
+<p>Chromosome mapping and genome structure.</p>
 </div>
 
 <div class="card">
 <h3>Sex Determination</h3>
-<p>Genetic mechanisms of sex determination in vertebrates.</p>
+<p>Genetic mechanisms of sex determination.</p>
 </div>
 
 <div class="card">
 <h3>Aquaculture Genetics</h3>
-<p>Genomics for breeding improvement in aquaculture species.</p>
+<p>Genomics for aquaculture breeding programs.</p>
 </div>
 
 </div>
@@ -314,140 +329,6 @@ International Publications
 </div>
 
 </section>
-
-
-<section id="publications">
-
-<div class="container">
-
-<h2>Selected Publications</h2>
-
-<div class="pub">
-Panthum T. et al. (2023) Preserving pure Siamese crocodile populations using multi-genetic tools.
-</div>
-
-<div class="pub">
-Panthum T. et al. (2023) In silico chromosome mapping of jade perch.
-</div>
-
-<div class="pub">
-Panthum T. et al. (2022) Sex determination system in Betta splendens.
-</div>
-
-<a class="btn" href="https://scholar.google.com/citations?user=si-w1BsAAAAJ">
-View full publication list
-</a>
-
-</div>
-
-</section>
-
-
-<section id="projects">
-
-<div class="container">
-
-<h2>Work & Research Experience</h2>
-
-<table>
-
-<tr>
-<th>Years</th>
-<th>Position</th>
-<th>Responsibilities</th>
-</tr>
-
-<tr>
-<td>2026</td>
-<td>Guest Lecturer</td>
-<td>Biology Program, Faculty of Science and Technology, Raden Fatah State Islamic University (UIN)</td>
-</tr>
-
-<tr>
-<td>2025–present</td>
-<td>Researcher / Faculty</td>
-<td>Conduct research and teach in the Bioscience (International Program)</td>
-</tr>
-
-<tr>
-<td>2025–2026</td>
-<td>Research Collaborator</td>
-<td>Pathum Thani Model: Upgrading Catfish Farming to Social Integrated Enterprise (NSTDA)</td>
-</tr>
-
-<tr>
-<td>2024–2026</td>
-<td>Research Collaborator</td>
-<td>Enhancing Competitive Capacity of Catfish Aquaculture Systems (BPK)</td>
-</tr>
-
-<tr>
-<td>2023–2026</td>
-<td>Research Assistant</td>
-<td>High-Potential Research Group Program for improving breeding of catfish species</td>
-</tr>
-
-<tr>
-<td>2023–2024</td>
-<td>Visiting Researcher</td>
-<td>In silico chromosome mapping research at University of Porto, Portugal</td>
-</tr>
-
-<tr>
-<td>2021–2022</td>
-<td>Research Collaborator</td>
-<td>Genetic diversity analysis of Swinhoe’s pheasant for conservation</td>
-</tr>
-
-</table>
-
-</div>
-
-</section>
-
-
-<section id="grants">
-
-<div class="container">
-
-<h2>Scholarships and Research Grants</h2>
-
-<ul>
-
-<li>ThaiSC Voucher Program 69 – Early Career Researcher Support Grant</li>
-<li>Preproposal Research Fund (PRF) 2026 – Kasetsart University</li>
-<li>Early Career Researcher Development Grant 2026 – NRCT</li>
-<li>Postdoctoral Fellowship Program 2024 – Kasetsart University</li>
-<li>Thailand Science Research and Innovation Grant – Reinventing University Program</li>
-<li>High-Quality Graduate Research Development Program – KU & NSTDA</li>
-<li>ASEAN–India Research Training Fellowship (AI-RTF), 2019</li>
-<li>Graduate Study Scholarship for International Publication</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-<section id="awards">
-
-<div class="container">
-
-<h2>Awards</h2>
-
-<ul>
-
-<li>Outstanding Thesis Award – NRCT</li>
-<li>Distinguished Doctoral Graduate – Kasetsart University</li>
-<li>1st Runner-Up Oral Presentation – NESTC</li>
-
-</ul>
-
-</div>
-
-</section>
-
 
 <section id="collaboration">
 
@@ -455,12 +336,11 @@ View full publication list
 
 <h2>Global Research Collaboration Network</h2>
 
-<div id="map" style="height:500px;border-radius:10px;"></div>
+<div id="map"></div>
 
 </div>
 
 </section>
-
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -469,7 +349,7 @@ View full publication list
 
 var map = L.map('map').setView([20,20],2);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png').addTo(map);
 
 var locations = {
 
@@ -498,8 +378,9 @@ for (var country in locations){
 if(country !== "Thailand"){
 
 L.polyline([hub,locations[country]],{
-color:"#0b3d91",
-weight:2
+color:"#10b981",
+weight:2,
+opacity:0.7
 }).addTo(map);
 
 }
@@ -507,24 +388,6 @@ weight:2
 }
 
 </script>
-
-
-<section id="cv">
-
-<div class="container">
-
-<h2>Curriculum Vitae</h2>
-
-<p>Download full academic CV.</p>
-
-<a class="btn" href="cv_thitipong_panthum.pdf" download>
-Download CV (PDF)
-</a>
-
-</div>
-
-</section>
-
 
 <section id="contact">
 
@@ -534,12 +397,11 @@ Download CV (PDF)
 
 <p>Email: thitipong.pant@ku.ac.th</p>
 
-<p>Google Scholar | ORCID | ResearchGate</p>
+<p>Kasetsart University, Thailand</p>
 
 </div>
 
 </section>
-
 
 <footer>
 
@@ -550,3 +412,4 @@ Download CV (PDF)
 </body>
 
 </html>
+```
