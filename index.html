@@ -19,8 +19,8 @@ GLOBAL
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:#f4f7fb;
-color:#222;
+background:#1f2428;
+color:#e6edf3;
 line-height:1.6;
 }
 
@@ -35,7 +35,7 @@ NAVBAR
 ======================= */
 
 nav{
-background:#0b3d91;
+background:#161b22;
 position:sticky;
 top:0;
 z-index:1000;
@@ -54,7 +54,7 @@ margin:0 18px;
 }
 
 nav a{
-color:white;
+color:#e6edf3;
 text-decoration:none;
 font-weight:600;
 }
@@ -64,7 +64,7 @@ HERO
 ======================= */
 
 .hero{
-background:linear-gradient(120deg,#0b3d91,#174ea6);
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
 color:white;
 padding:90px 0;
 }
@@ -89,7 +89,7 @@ margin-bottom:8px;
 
 .hero p{
 font-size:18px;
-opacity:0.9;
+opacity:0.95;
 margin:4px 0;
 }
 
@@ -102,8 +102,8 @@ display:inline-block;
 padding:10px 16px;
 margin-right:10px;
 border-radius:6px;
-background:white;
-color:#0b3d91;
+background:#2c5364;
+color:white;
 text-decoration:none;
 font-weight:600;
 font-size:14px;
@@ -120,7 +120,7 @@ padding:70px 0;
 h2{
 font-size:30px;
 margin-bottom:25px;
-border-left:6px solid #0b3d91;
+border-left:6px solid #3fb950;
 padding-left:12px;
 }
 
@@ -135,10 +135,10 @@ gap:25px;
 }
 
 .card{
-background:white;
+background:#161b22;
 padding:25px;
 border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
 }
 
 /* =======================
@@ -148,9 +148,9 @@ PUBLICATIONS
 .pub{
 margin-bottom:14px;
 padding:14px;
-background:white;
-border-left:5px solid #0b3d91;
-box-shadow:0 2px 6px rgba(0,0,0,0.05);
+background:#161b22;
+border-left:5px solid #3fb950;
+box-shadow:0 2px 6px rgba(0,0,0,0.4);
 border-radius:4px;
 }
 
@@ -166,17 +166,17 @@ margin-top:25px;
 }
 
 .metric-card{
-background:white;
+background:#161b22;
 padding:20px;
 border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.08);
+box-shadow:0 3px 10px rgba(0,0,0,0.4);
 min-width:180px;
 }
 
 .metric-number{
 font-size:28px;
 font-weight:700;
-color:#0b3d91;
+color:#3fb950;
 }
 
 /* =======================
@@ -186,10 +186,13 @@ TABLE
 table{
 width:100%;
 border-collapse:collapse;
+background:#161b22;
+border-radius:10px;
+overflow:hidden;
 }
 
 td,th{
-border-bottom:1px solid #ddd;
+border-bottom:1px solid #30363d;
 padding:10px;
 }
 
@@ -198,8 +201,8 @@ FOOTER
 ======================= */
 
 footer{
-background:#111;
-color:white;
+background:#0d1117;
+color:#8b949e;
 text-align:center;
 padding:35px;
 margin-top:40px;
@@ -228,8 +231,6 @@ margin-top:40px;
 </nav>
 
 
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -263,8 +264,6 @@ margin-top:40px;
 
 
 
-<!-- ABOUT -->
-
 <section id="about">
 
 <div class="container">
@@ -273,21 +272,22 @@ margin-top:40px;
 
 <p>
 
-Dr. Thitipong Panthum is a researcher in animal genomics and molecular cytogenetics. His research focuses on genome evolution, sex determination systems, and comparative genomics across aquatic and vertebrate species. His work integrates genome sequencing technologies, bioinformatics pipelines, and evolutionary biology to understand chromosome architecture and genetic diversity.
+Dr. Thitipong Panthum is a researcher in animal genomics and molecular cytogenetics. His research focuses on genome evolution, sex determination systems, and comparative genomics across aquatic and vertebrate species.
 
 </p>
-
 
 <div class="metrics">
 
 <div class="metric-card">
 <div class="metric-number">15</div>
-Google Scholar h-index
+Google Scholar h-index<br>
+<small>as of 11 March 2026</small>
 </div>
 
 <div class="metric-card">
 <div class="metric-number">14</div>
-Scopus h-index
+Scopus h-index<br>
+<small>as of 11 March 2026</small>
 </div>
 
 <div class="metric-card">
@@ -302,8 +302,6 @@ International Publications
 </section>
 
 
-
-<!-- RESEARCH -->
 
 <section id="research">
 
@@ -341,8 +339,6 @@ International Publications
 
 
 
-<!-- PUBLICATIONS -->
-
 <section id="publications">
 
 <div class="container">
@@ -360,134 +356,6 @@ Panthum T. et al. (2023) In silico chromosome mapping of jade perch. Fishes.
 <div class="pub">
 Panthum T. et al. (2022) Sex determination system in Betta splendens. Cells.
 </div>
-
-<div class="pub">
-Panthum T. et al. (2021) Genome-wide SNP analysis in rice field frogs. Diversity.
-</div>
-
-<p><b>Full publication list:</b></p>
-
-<p>
-
-<a class="btn" href="https://scholar.google.com/citations?user=si-w1BsAAAAJ&hl=th" target="_blank">Google Scholar</a>
-
-<a class="btn" href="https://www.scopus.com/authid/detail.uri?authorId=57218177525" target="_blank">Scopus Author Profile</a>
-
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<div class="container">
-
-<h2>Research Projects</h2>
-
-<table>
-
-<tr>
-<th>Year</th>
-<th>Project</th>
-</tr>
-
-<tr>
-<td>2025</td>
-<td>Catfish breeding improvement using genomics</td>
-</tr>
-
-<tr>
-<td>2025</td>
-<td>Pathum Thani Model – Catfish farming innovation</td>
-</tr>
-
-<tr>
-<td>2024</td>
-<td>Genomic diversity of Siamese crocodile populations</td>
-</tr>
-
-</table>
-
-</div>
-
-</section>
-
-
-
-<!-- GRANTS -->
-
-<section id="grants">
-
-<div class="container">
-
-<h2>Scholarships and Research Grants</h2>
-
-<ul>
-
-<li>ThaiSC Voucher Program 69 – Early Career Researcher Support Grant</li>
-
-<li>Preproposal Research Fund (PRF) 2026 – Faculty of Science, Kasetsart University</li>
-
-<li>Early Career Researcher Development Grant 2026 – NRCT</li>
-
-<li>Postdoctoral Fellowship Program 2024 – Kasetsart University</li>
-
-<li>ASEAN–India Research Training Fellowship (AI-RTF)</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-
-<!-- AWARDS -->
-
-<section id="awards">
-
-<div class="container">
-
-<h2>Awards</h2>
-
-<ul>
-
-<li>Outstanding Thesis Award in Agriculture and Biology (2024) – NRCT</li>
-
-<li>Distinguished Doctoral Graduate Award – Kasetsart University</li>
-
-<li>1st Runner-Up Oral Presentation – NESTC 2018</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-<h2>Contact</h2>
-
-<p>Email: thitipong.pant@ku.ac.th</p>
-
-<p>
-
-<a class="btn" href="https://scholar.google.com/citations?user=si-w1BsAAAAJ&hl=th">Google Scholar</a>
-
-<a class="btn" href="https://www.scopus.com/authid/detail.uri?authorId=57218177525">Scopus</a>
-
-</p>
 
 </div>
 
