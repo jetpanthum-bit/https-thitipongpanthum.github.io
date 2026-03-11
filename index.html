@@ -543,7 +543,7 @@ Indonesia:[-0.7893,113.9213]
 const hub = locations["Thailand"];
 
 
-/* convert nodes */
+/* nodes */
 
 const nodes = Object.keys(locations).map(country => ({
 
@@ -554,13 +554,13 @@ lng:locations[country][1]
 }));
 
 
-/* collaboration arcs */
+/* arcs */
 
-const arcs = [];
+const arcs=[];
 
-for (const country in locations){
+for(const country in locations){
 
-if(country !== "Thailand"){
+if(country!=="Thailand"){
 
 arcs.push({
 
@@ -568,7 +568,7 @@ startLat:hub[0],
 startLng:hub[1],
 endLat:locations[country][0],
 endLng:locations[country][1],
-color:["#3b82f6","#60a5fa"]
+color:["#2563eb","#60a5fa"]
 
 });
 
@@ -577,109 +577,45 @@ color:["#3b82f6","#60a5fa"]
 }
 
 
-/* create globe */
+/* globe */
 
 const globe = Globe()
 
 (document.getElementById('globeViz'))
 
-.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
+.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
 
-.backgroundColor('#0f172a')
+.backgroundColor('#ffffff')
 
 .pointsData(nodes)
 
-.pointLat(d => d.lat)
+.pointLat(d=>d.lat)
 
-.pointLng(d => d.lng)
+.pointLng(d=>d.lng)
 
-.pointColor(() => "#60a5fa")
+.pointColor(()=>'#2563eb')
 
-.pointAltitude(0.02)
+.pointAltitude(0.015)
 
-.pointRadius(0.4)
+.pointRadius(0.45)
 
-.pointLabel(d => d.name)
+.pointLabel(d=>d.name)
 
 .arcsData(arcs)
 
-.arcColor(d => d.color)
+.arcColor(d=>d.color)
 
 .arcAltitude(0.25)
 
-.arcStroke(1.5)
+.arcStroke(1.4)
 
 .arcDashLength(0.4)
 
 .arcDashGap(2)
 
-.arcDashAnimateTime(3000);
+.arcDashAnimateTime(3500);
 
 </script>
-
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-<script>
-
-var map = L.map('map').setView([20,20],2);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
-var locations = {
-
-Thailand:[13.7367,100.5231],
-Portugal:[38.7223,-9.1393],
-Bangladesh:[23.6850,90.3563],
-China:[35.8617,104.1954],
-India:[20.5937,78.9629],
-Nigeria:[9.0820,8.6753],
-Senegal:[14.4974,-14.4524],
-Ethiopia:[9.1450,40.4897],
-"Czech Republic":[49.8175,15.4730],
-Australia:[-25.2744,133.7751],
-Indonesia:[-0.7893,113.9213]
-
-};
-
-for (var country in locations){
-L.marker(locations[country]).addTo(map).bindPopup(country);
-}
-
-var hub = locations["Thailand"];
-
-for (var country in locations){
-
-if(country !== "Thailand"){
-
-L.polyline([hub,locations[country]],{
-color:"#0b3d91",
-weight:2
-}).addTo(map);
-
-}
-
-}
-
-</script>
-
-
-<section id="cv">
-
-<div class="container">
-
-<h2>Curriculum Vitae</h2>
-
-<p>Download full academic CV.</p>
-
-<a class="btn" href="cv_thitipong_panthum.pdf" download>
-Download CV (PDF)
-</a>
-
-</div>
-
-</section>
 
 
 <section id="contact">
