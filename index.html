@@ -40,13 +40,14 @@ z-index:1000;
 nav ul{
 display:flex;
 justify-content:center;
+flex-wrap:wrap;
 list-style:none;
 margin:0;
 padding:12px;
 }
 
 nav li{
-margin:0 18px;
+margin:6px 18px;
 }
 
 nav a{
@@ -171,6 +172,12 @@ border-bottom:1px solid #ddd;
 padding:10px;
 }
 
+/* ===== MAP ===== */
+
+iframe{
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
 /* ===== FOOTER ===== */
 
 footer{
@@ -192,11 +199,14 @@ margin-top:40px;
 <ul>
 
 <li><a href="#about">About</a></li>
+<li><a href="#profiles">Profiles</a></li>
 <li><a href="#research">Research</a></li>
 <li><a href="#publications">Publications</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#grants">Grants</a></li>
 <li><a href="#awards">Awards</a></li>
+<li><a href="#collaboration">Collaboration</a></li>
+<li><a href="#cv">CV</a></li>
 <li><a href="#contact">Contact</a></li>
 
 </ul>
@@ -225,9 +235,9 @@ margin-top:40px;
 
 <a class="btn" href="https://scholar.google.com/citations?user=si-w1BsAAAAJ" target="_blank">Google Scholar</a>
 
-<a class="btn" href="https://orcid.org/" target="_blank">ORCID</a>
+<a class="btn" href="https://orcid.org/0000-0001-7147-1684" target="_blank">ORCID</a>
 
-<a class="btn" href="https://www.researchgate.net/" target="_blank">ResearchGate</a>
+<a class="btn" href="https://www.researchgate.net/profile/Thitipong-Panthum" target="_blank">ResearchGate</a>
 
 </div>
 
@@ -251,7 +261,6 @@ Dr. Thitipong Panthum is a researcher in animal genomics and molecular cytogenet
 
 </p>
 
-
 <div class="metrics">
 
 <div class="metric-card">
@@ -267,6 +276,42 @@ Scopus h-index
 <div class="metric-card">
 <div class="metric-number">60+</div>
 International Publications
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ACADEMIC PROFILES -->
+
+<section id="profiles">
+
+<div class="container">
+
+<h2>Academic Profiles</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>ORCID</h3>
+<p>Persistent digital identifier linking research outputs.</p>
+<a class="btn" href="https://orcid.org/0000-0001-7147-1684" target="_blank">View ORCID</a>
+</div>
+
+<div class="card">
+<h3>Scopus Author Profile</h3>
+<p>Indexed publications and citation analytics.</p>
+<a class="btn" href="https://www.scopus.com/authid/detail.uri?authorId=57218177525" target="_blank">View Scopus</a>
+</div>
+
+<div class="card">
+<h3>ResearchGate</h3>
+<p>Research collaboration network and publication sharing.</p>
+<a class="btn" href="https://www.researchgate.net/profile/Thitipong-Panthum" target="_blank">View ResearchGate</a>
 </div>
 
 </div>
@@ -335,13 +380,9 @@ Panthum T. et al. (2023) In silico chromosome mapping of jade perch.
 Panthum T. et al. (2022) Sex determination system in Betta splendens.
 </div>
 
-<p>
-
 <a class="btn" href="https://scholar.google.com/citations?user=si-w1BsAAAAJ">
 View full publication list
 </a>
-
-</p>
 
 </div>
 
@@ -427,6 +468,49 @@ View full publication list
 
 
 
+<!-- COLLABORATION -->
+
+<section id="collaboration">
+
+<div class="container">
+
+<h2>Global Research Collaboration</h2>
+
+<p>International collaboration in genomics and aquaculture research.</p>
+
+<iframe
+src="https://www.google.com/maps?q=Kasetsart+University&output=embed"
+width="100%"
+height="450"
+style="border:0;border-radius:10px;">
+</iframe>
+
+</div>
+
+</section>
+
+
+
+<!-- CV -->
+
+<section id="cv">
+
+<div class="container">
+
+<h2>Curriculum Vitae</h2>
+
+<p>Download full academic CV.</p>
+
+<a class="btn" href="cv_thitipong_panthum.pdf" download>
+Download CV (PDF)
+</a>
+
+</div>
+
+</section>
+
+
+
 <!-- CONTACT -->
 
 <section id="contact">
@@ -438,11 +522,7 @@ View full publication list
 <p>Email: thitipong.pant@ku.ac.th</p>
 
 <p>
-
-<a href="https://scholar.google.com">Google Scholar</a> |
-<a href="https://orcid.org">ORCID</a> |
-<a href="https://researchgate.net">ResearchGate</a>
-
+Google Scholar | ORCID | ResearchGate
 </p>
 
 </div>
