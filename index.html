@@ -511,11 +511,111 @@ View full publication list
 
 <h2>Global Research Collaboration Network</h2>
 
-<div id="map" style="height:500px;border-radius:10px;"></div>
+<div id="globeViz" style="width:100%;height:600px;"></div>
 
 </div>
 
 </section>
+
+
+<script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+<script src="https://unpkg.com/globe.gl"></script>
+
+
+<script>
+
+const locations = {
+
+Thailand:[13.7367,100.5231],
+Portugal:[38.7223,-9.1393],
+Bangladesh:[23.6850,90.3563],
+China:[35.8617,104.1954],
+India:[20.5937,78.9629],
+Nigeria:[9.0820,8.6753],
+Senegal:[14.4974,-14.4524],
+Ethiopia:[9.1450,40.4897],
+"Czech Republic":[49.8175,15.4730],
+Australia:[-25.2744,133.7751],
+Indonesia:[-0.7893,113.9213]
+
+};
+
+const hub = locations["Thailand"];
+
+
+/* convert nodes */
+
+const nodes = Object.keys(locations).map(country => ({
+
+name:country,
+lat:locations[country][0],
+lng:locations[country][1]
+
+}));
+
+
+/* collaboration arcs */
+
+const arcs = [];
+
+for (const country in locations){
+
+if(country !== "Thailand"){
+
+arcs.push({
+
+startLat:hub[0],
+startLng:hub[1],
+endLat:locations[country][0],
+endLng:locations[country][1],
+color:["#3b82f6","#60a5fa"]
+
+});
+
+}
+
+}
+
+
+/* create globe */
+
+const globe = Globe()
+
+(document.getElementById('globeViz'))
+
+.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
+
+.backgroundColor('#0f172a')
+
+.pointsData(nodes)
+
+.pointLat(d => d.lat)
+
+.pointLng(d => d.lng)
+
+.pointColor(() => "#60a5fa")
+
+.pointAltitude(0.02)
+
+.pointRadius(0.4)
+
+.pointLabel(d => d.name)
+
+.arcsData(arcs)
+
+.arcColor(d => d.color)
+
+.arcAltitude(0.25)
+
+.arcStroke(1.5)
+
+.arcDashLength(0.4)
+
+.arcDashGap(2)
+
+.arcDashAnimateTime(3000);
+
+</script>
 
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
